@@ -1,0 +1,69 @@
+#GOOGLE APP ID AND SECRET KEY
+APP:
+  ID: 844717647114774
+  SECRET: 31d596fd4632b3d8f17f23ceaeb4dffd
+
+#SMS CONFIGURATION
+termii:
+  api-key: TLy4fqDk8iJXns6CQcTpvbTKgNFIC6gZushjMsdd4p8QvYTZDJgnneoVkJpk2E
+  sender-id: AIGNIGERIA
+mailer:
+  sender:
+    api-key: mlsn.95f9e4a92d3e7393b791684f0ba8609e5ed24dd7fa6136d3746db3c092b51830
+
+#EUREKA SERVER CONFIGURATION
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+# JWT AUTHENTICATION SECRET KEY
+secret:
+  key: 774488559966abcsdefghijklmnopqrstuvwxyz1234567890
+
+# DATABASE AND JPA CONFIGURATION
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Java@2023
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  # MULTIPART CONFIGURATION
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+ # FILE UPLOAD DIR     
+upload:
+  path: E:\javaprojects\AIGL-28-08-2023\FileService\src\main\resources\static\
+
+
+  #  CORS POLICY CONFIGURATION
+#  Note :- add the origins sepereated by ,
+cors:
+  allowed_origins:
+    admin: http://localhost:4500,http://aigadmin.dollopinfotech.com
+    
+    user: http://localhost:4600
+  
+    portal_officer: http://localhost:4200,http://aigverification.dollopinfotech.com
+    
+    verification_officer: 
+    
+    emergency_officer: http://localhost:4300,http://aigemergency.dollopinfotech.com
+    
+    api_doc_user: http://localhost:4400,http://aigapidoc.dollopinfotech.com
+
