@@ -17,7 +17,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka:password@eureka-server:8761/eureka
+      defaultZone: ${EUREKA_SERVER_URL:http://eureka:password@eureka-server:8761/eureka}
   instance:
     prefer-ip-address: true
 
@@ -29,8 +29,8 @@ secret:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: root
-    username: root
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
   jpa:
     hibernate:
       ddl-auto: update
